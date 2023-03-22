@@ -1,0 +1,45 @@
+POO HOTEL
+
+CLASSES :
+    -> Hotel
+        -> name
+        -> addressName
+        -> zipCode
+        -> nbRooms
+        -> nbBookedRooms
+        -> nbAvailableRooms
+        -> clients
+        -> ...
+
+    -> Person
+        -> firstName
+        -> lastName
+        -> genre
+        -> birthDate
+
+    -> Client
+        -> propriétés de Person
+        -> /
+        -> /
+        -> /
+        -> /
+        -> bookings
+        -> ...
+    -> Room 
+        -> hotel
+        -> nbBeds
+        -> price
+        -> wifi
+        -> ...
+
+    -> Booking 
+        -> client
+        -> hotel
+        -> room
+        -> dateStrat
+        -> dateEnd
+        -> ...
+
+    -> 
+    -> 
+    -> 

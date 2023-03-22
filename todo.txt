@@ -5,10 +5,8 @@ CLASSES :
         -> name
         -> addressName
         -> zipCode
-        -> nbRooms
-        -> nbBookedRooms
-        -> nbAvailableRooms
-        -> clients
+        -> rooms
+        -> bookings
         -> ...
 
     -> Person
@@ -30,14 +28,16 @@ CLASSES :
         -> nbBeds
         -> price
         -> wifi
+        -> state
         -> ...
 
     -> Booking 
         -> client
         -> hotel
         -> room
-        -> dateStrat
+        -> dateStart
         -> dateEnd
+        -> price
         -> ...
 
     -> 

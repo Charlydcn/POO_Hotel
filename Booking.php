@@ -11,7 +11,9 @@
         public function __construct(Client $_client, Hotel $_hotel, Room $_room, string $_dateStart, string $_dateEnd)
         {
             $this->_client = $_client;
+            $_client->addBooking($this);
             $this->_hotel = $_hotel;
+            $_hotel->addBooking($this);
             $this->_room = $_room;
             $this->_dateStart = new DateTime($_dateStart);
             $this->_dateEnd = new DateTime($_dateEnd);
@@ -101,12 +103,12 @@
 
         public function __toString()
         {
-            return $this->_client
-            . $this->_hotel
-            . $this->_room
-            . $this->_dateStart
-            . $this->_dateEnd
-            . $this->getBookingDuration()
+            return $this->_client . "<br>"
+            . $this->_hotel . "<br>"
+            . $this->_room . "<br>"
+            . $this->getDateStart() . "<br>"
+            . $this->getDateEnd() . "<br>"
+            . $this->getBookingDuration() . "<br>"
             . $this->getBookingPrice();
         }
 

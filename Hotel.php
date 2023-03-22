@@ -110,6 +110,16 @@ class Hotel
 
     //************************************************************************************************************
 
+    public function addRoom(Room $room)
+        {
+            $this->_rooms[] = $room;
+        }
+
+    public function addBooking(Booking $booking)
+        {
+            $this->_bookings[] = $booking;
+        }
+
     public function __toString()
     {
         return $this->_name . "<br>"

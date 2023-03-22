@@ -17,7 +17,7 @@
         {
             $result = "<ul>";
             foreach ($this->_bookings as $booking) {
-                $result .= "<li>" . $booking . "</li>";
+                $result .= "<li>" . $booking->getInfos() . "</li><br>";
             }
             $result .= "</ul>";
             return $result;

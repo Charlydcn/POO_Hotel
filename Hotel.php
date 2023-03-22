@@ -4,11 +4,11 @@ class Hotel
 {
     private string $_name;
     private string $_addressName;
-    private int $_zipCode;
+    private string $_zipCode;
     private array $_rooms;
     private array $_bookings;
 
-    public function __construct(string $_name, string $_addressName, int $_zipCode)
+    public function __construct(string $_name, string $_addressName, string $_zipCode)
     {
         $this->_name = $_name;
         $this->_addressName = $_addressName;
@@ -52,12 +52,17 @@ class Hotel
 
     public function getBookings() // A TESTER
     {
-        $result = "<ul>";
-        foreach ($this->_bookings as $booking) {
-            $result .= "<li>" . $booking . "</li>";
+        if (count($this->_bookings) > 1)
+        {
+            $result = "<ul>";
+            foreach ($this->_bookings as $booking) {
+                $result .= "<li>" . $booking . "</li>";
+            }
+            $result .= "</ul>";
+            return $result;
+        } else {
+            return "Aucune réservation !";
         }
-        $result .= "</ul>";
-        return $result;
     }
 
     public function getNbBookings() // A TESTER

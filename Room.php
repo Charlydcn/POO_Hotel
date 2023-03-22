@@ -13,6 +13,7 @@
         {
             $this->_id = $_id;
             $this->_hotel = $_hotel;
+            $_hotel->addRoom($this);
             $this->_nbBeds = $_nbBeds;
             $this->_price = $_price;
             $this->_wifi = $_wifi;
@@ -67,7 +68,7 @@
             return "Chambre " . $this->_id . "<br>"
             . "Hôtel : " . $this->_hotel . "<br>"
             . "Nombre de lits : " . $this->_nbBeds . "<br>"
-            . "Prix de la nuit : " . $this->_price . "<br>"
+            . "Prix de la nuit : " . $this->_price . " €<br>"
             . $this->getWifi() . "<br>"
             . "État de la chambre : " . $this->getState(); 
         }
@@ -109,7 +110,7 @@
 
         public function __toString() // A TESTER
         {
-            return $this->_id . $this->_nbBeds . " - " . $this->_price . " - " . $this->_wifi;
+            return $this->_id . " " . $this->_nbBeds . " lits - " . $this->_price . " €- " . $this->getWifi();
         }
 
 

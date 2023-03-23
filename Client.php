@@ -53,7 +53,7 @@
 
         public function __toString() // A TESTER
         {
-            return strtoupper($this->getLastName()) . " " . $this->getFirstName();
+            return $this->getFirstName() . " " . strtoupper($this->getLastName());
         }
 
 

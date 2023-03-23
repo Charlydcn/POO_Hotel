@@ -47,17 +47,17 @@
             return $this->_dateEnd->format("d-m-Y");
         }
 
-        public function getBookingDuration() // A TESTER
+        public function getDuration() // A TESTER
         {
             $interval = $this->_dateStart->diff($this->_dateEnd);
             return $interval->d . " jours";
         }
 
-        public function getBookingPrice() // A TESTER
+        public function getPrice() // A TESTER
         {
             $interval = $this->_dateStart->diff($this->_dateEnd);
             $price = $this->_room->getPrice() * $interval->d;
-            return $price . " €";
+            return $price;
         }
         
         public function getInfos()
@@ -69,6 +69,14 @@
             . "Date de fin : " . $this->getDateEnd() . "<br>"
             . "(Durée : " . $this->getBookingDuration() . ") <br>"
             . "Prix : " . $this->getBookingPrice();
+        }
+
+        public function getInfosShort()
+        {
+            return $this->_client . " - "
+            . "Chambre " . $this->_room . " - "
+            . " du " . $this->getDateStart()
+            . " au " . $this->getDateEnd();
         }
 
         // ************************************************************************************************** 
@@ -104,7 +112,7 @@
         public function __toString()
         {
             return $this->_client . " - "
-            . "Chambre " . $this->_room . " - "
+            . "Chambre " . $this->_room->getId() . " - "
             . " du " . $this->getDateStart()
             . " au " . $this->getDateEnd();
         }

@@ -110,7 +110,7 @@
 
         public function __toString() // A TESTER
         {
-            return $this->_id . " " . $this->_nbBeds . " lits - " . $this->_price . " €- " . $this->getWifi();
+            return $this->_id . " ";
         }
 
 

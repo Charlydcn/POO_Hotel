@@ -15,11 +15,14 @@
 
         public function getBookings() // A TESTER
         {
-            $result = "<ul>";
+            $result = "<h2>Réservations de " . $this . "</h2><br>";
+            $result .= "<div class='booking_counter'>" . $this->getNbBookings() . " RÉSERVATIONS</div>";
+            $total = 0;
             foreach ($this->_bookings as $booking) {
-                $result .= "<li>" . $booking->getInfos() . "</li><br>";
-            }
-            $result .= "</ul>";
+                $result .= "<p><strong>Hôtel : " . $booking->getHotel() . "</strong>";
+                $result .= " / " . $booking->getInfosShort();
+                $total += $booking->getPrice();
+            } $result .= "<br>Total : " . $total . " €";
             return $result;
         }
 

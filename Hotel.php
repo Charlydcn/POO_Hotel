@@ -4,14 +4,16 @@ class Hotel
 {
     private string $_name;
     private string $_addressName;
-    private string $_zipCode;
+    private string $_city;
+    private int $_zipCode;
     private array $_rooms;
     private array $_bookings;
 
-    public function __construct(string $_name, string $_addressName, string $_zipCode)
+    public function __construct(string $_name, string $_addressName, string $_city, int $_zipCode)
     {
         $this->_name = $_name;
         $this->_addressName = $_addressName;
+        $this->_city = $_city;
         $this->_zipCode = $_zipCode;
         $this->_rooms = [];
         $this->_bookings = [];       
@@ -30,9 +32,19 @@ class Hotel
         return $this->_addressName;
     }
 
+    public function getCity()
+    {
+        $result = $this->_city;
+    }
+
     public function getZipCode() // A TESTER
     {
         return $this->_zipCode;
+    }
+    
+    public function getFullAddress()
+    {
+        return $this->_addressName . " " . $this->_zipCode . " " . $this->_city;
     }
 
     public function getRooms() // A TESTER
@@ -73,8 +85,8 @@ class Hotel
     public function getInfos()
     {
         $nbAvailableRooms = $this->getNbRooms() - $this->getNbBookings();
-        return "<h2>" . $this->_name . "</h2><br>"
-        . "<p>" . $this->_addressName . " " . $this->_zipCode . "<br>"
+        return "<h2>" . $this->_name . " " . $this->_city . "</h2>" 
+        . "<p>" . $this->getFullAddress() .  "<br>"
         . "Nombre de chambres : " . $this->getNbRooms() . "<br>"
         . "Nombre de chambres réservées : " . $this->getNbBookings() . "<br>"
         . "Nombre de chambres disponibles : " . $nbAvailableRooms;
@@ -91,6 +103,11 @@ class Hotel
     public function setAddressName($addressName) // A TESTER
     {
         $this->_addressName = $addressName;
+    }
+
+    public function setCity($city) // A TESTER
+    {
+        $this->_city = $city;
     }
 
     public function setZipCode($zipCode) // A TESTER
@@ -123,7 +140,7 @@ class Hotel
     public function __toString()
     {
         return $this->_name . "<br>"
-        . $this->_addressName . " " . $this->_zipCode . "<br>";
+        . $this->_addressName . " " . $this->_zipCode;
     }
     
 }

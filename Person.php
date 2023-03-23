@@ -48,22 +48,22 @@ abstract class Person
     // *************************************************************************************************
     // ************************************** MUTATEURS (setters) ************************************** 
 
-    public function setFirstName($firstName) // CHECK
+    public function setFirstName(string $firstName) // CHECK
     {
         $this->_firstName = $firstName;
     }
 
-    public function setLastName($lastName) // CHECK
+    public function setLastName(string $lastName) // CHECK
     {
         $this->_lastName = $lastName;
     }
 
-    public function setGenre($genre) // CHECK
+    public function setGenre(string $genre) // CHECK
     {
         $this->_genre = $genre;
     }
 
-    public function setBirthDate($birthDate) // CHECK
+    public function setBirthDate(string $birthDate) // CHECK
     {
         $this->_birthDate = new Datetime($birthDate);
     }

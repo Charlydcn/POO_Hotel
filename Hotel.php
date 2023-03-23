@@ -95,22 +95,22 @@ class Hotel
     //************************************************************************************************************
     //******************************************* MUTATEURS (setters) *******************************************
 
-    public function setName($name) // A TESTER
+    public function setName(string $name) // A TESTER
     {
         $this->_name = $name;
     }
 
-    public function setAddressName($addressName) // A TESTER
+    public function setAddressName(string $addressName) // A TESTER
     {
         $this->_addressName = $addressName;
     }
 
-    public function setCity($city) // A TESTER
+    public function setCity(string $city) // A TESTER
     {
         $this->_city = $city;
     }
 
-    public function setZipCode($zipCode) // A TESTER
+    public function setZipCode(int $zipCode) // A TESTER
     {
         $this->_zipCode = $zipCode;
     }

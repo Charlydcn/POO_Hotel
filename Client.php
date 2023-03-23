@@ -39,7 +39,7 @@
         // **************************************************************************************************
         // ************************************** MUTATEURS (setters) ***************************************
 
-        public function setBookings($booking) // A TESTER
+        public function setBookings(Booking $booking) // A TESTER
         {
             $this->_bookings[] = $booking;
         }

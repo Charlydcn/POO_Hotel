@@ -66,14 +66,18 @@ class Hotel
     {
         if (count($this->_bookings) > 1)
         {
-            $result = "<ul>";
+            $result = "<h2>Réservations de l'hôtel" . " " . $this->_name . " " . $this->_city . "</h2>";
+            $result .= "<div class='booking_counter'>" . $this->getNbBookings() . " RÉSERVATIONS</div>";
+            $result .= "<p>";
             foreach ($this->_bookings as $booking) {
-                $result .= "<li>" . $booking . "</li>";
+                $result .= $booking . "<br>";
             }
-            $result .= "</ul>";
+            $result .= "</p>";
             return $result;
         } else {
-            return "Aucune réservation !";
+            $result = "<h2>Réservations de l'hôtel" . " " . $this->_name . " " . $this->_city . "</h2>";
+            $result .= "<p>Aucune réservation ! </p>";
+            return $result;
         }
     }
 

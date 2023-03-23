@@ -53,13 +53,24 @@
             }
         }
 
+        public function getWifiLogo()
+        {
+            // <i class="fa-solid fa-wifi"></i>
+            if ($this->_wifi === true)
+            {
+                return "<i class='fa-solid fa-wifi'></i>";
+            } else {
+                return "";
+            }
+        }
+
         public function getState() // A TESTER
         {
             if ($this->_state === true)
             {
-                return "Chambre disponible";
+                return "<span id='room_available'>Disponible</span>";
             } else {
-                return "Chambre réservée";
+                return "<span id='room_booked'>Réservée</span>";
             }
         }
 
@@ -110,7 +121,7 @@
 
         public function __toString() // A TESTER
         {
-            return $this->_id . " ";
+            return " (" . $this->_nbBeds . " lits - " . $this->getPrice() . " € - " . $this->getWifi() . ")";
         }
 
 

@@ -143,8 +143,7 @@ class Hotel
 
     public function __toString()
     {
-        return $this->_name . "<br>"
-        . $this->_addressName . " " . $this->_zipCode;
+        return $this->_name . " " . $this->_city;
     }
     
 }

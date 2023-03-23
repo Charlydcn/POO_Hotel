@@ -50,7 +50,7 @@
         public function getBookingDuration() // A TESTER
         {
             $interval = $this->_dateStart->diff($this->_dateEnd);
-            return $interval->d . " jours.";
+            return $interval->d . " jours";
         }
 
         public function getBookingPrice() // A TESTER
@@ -103,13 +103,10 @@
 
         public function __toString()
         {
-            return $this->_client . "<br>"
-            . $this->_hotel . "<br>"
-            . $this->_room . "<br>"
-            . $this->getDateStart() . "<br>"
-            . $this->getDateEnd() . "<br>"
-            . $this->getBookingDuration() . "<br>"
-            . $this->getBookingPrice();
+            return $this->_client . " - "
+            . "Chambre " . $this->_room . " - "
+            . " du " . $this->getDateStart()
+            . " au " . $this->getDateEnd();
         }
 
     }

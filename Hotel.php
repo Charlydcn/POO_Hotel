@@ -49,11 +49,21 @@ class Hotel
 
     public function getRooms() // A TESTER
     {
-        $result = "<ul>";
+        $result = 
+        "<table id='rooms_list'>
+            <thead>
+                <tr>
+                    <th>CHAMBRE</th>
+                    <th>PRIX</th>
+                    <th>WIFI</th>
+                    <th>ETAT</th>
+                </tr>
+            </thead>
+            <tbody>";
         foreach ($this->_rooms as $room) {
-            $result .= "<li>" . $room . "</li>";
-        }
-        $result .= "</ul>";
+            $result .= "<tr><td>" . "Chambre " . $room->getId() . "</td><td>" . $room->getPrice() . "</td><td>" . $room->getWifiLogo() . "</td><td>" . "<span id='room_state'>" . mb_strtoupper($room->getState()). "</span>" . "</tr>";
+        }        
+        $result .= "</tbody></table>";
         return $result;
     }
 

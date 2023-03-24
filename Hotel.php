@@ -61,7 +61,7 @@ class Hotel
             </thead>
             <tbody>";
         foreach ($this->_rooms as $room) {
-            $result .= "<tr><td>" . "Chambre " . $room->getId() . "</td><td>" . $room->getPrice() . "</td><td>" . $room->getWifiLogo() . "</td><td>" . "<span id='room_state'>" . mb_strtoupper($room->getState()). "</span>" . "</tr>";
+            $result .= "<tr><td>" . "Chambre " . $room->getId() . "</td><td>" . $room->getPrice() . " €</td><td>" . $room->getWifiLogo() . "</td><td>" . mb_strtoupper($room->getState()) . "</tr>";
         }        
         $result .= "</tbody></table>";
         return $result;
@@ -76,8 +76,8 @@ class Hotel
     {
         if (count($this->_bookings) > 1)
         {
-            $result = "<h2>Réservations de l'hôtel" . " " . $this->_name . " " . $this->_city . "</h2>";
-            $result .= "<div class='booking_counter'>" . $this->getNbBookings() . " RÉSERVATIONS</div>";
+            $result = "<h2>Réservation(s) de l'hôtel" . " " . $this->_name . " " . $this->_city . "</h2>";
+            $result .= "<span class='booking_counter'>" . $this->getNbBookings() . " RÉSERVATION(S)</span>";
             $result .= "<p>";
             foreach ($this->_bookings as $booking) {
                 $result .= $booking . "<br>";

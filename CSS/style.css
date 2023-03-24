@@ -15,7 +15,7 @@ p {
 #rooms_list {
     border-collapse:collapse;
     padding:5px;
-    width:60%;
+    width:100%;
 }
 
 #rooms_list tbody>tr:nth-child(odd) {
@@ -27,10 +27,19 @@ p {
     opacity:40%;
     padding:1.25rem;
     font-weight: 200;
+    width:15%;
+}
+
+#rooms_list th, #rooms-list td {
+    
+    text-align: start;
+}
+
+#rooms_list thead th:first-of-type {
+    width:30%;
 }
 
 #rooms_list td {
-    text-align:center;
     padding:1.25rem;
     border-top: 1px rgb(202, 202, 202) solid;
 }
@@ -43,7 +52,7 @@ td:nth-last-child(4) {
     opacity:100%;
 }
 
-.ROOM_AVAILABLE {
+.ROOM_AVAILABLE, .ROOM_BOOKED {
     font-size: 0.85rem;
     background-color: #32d296;
     padding: 4px 10px;
@@ -52,11 +61,7 @@ td:nth-last-child(4) {
 }
 
 .ROOM_BOOKED {
-    font-size: 0.85rem;
     background-color: #f04f6e;
-    padding: 4px 10px;
-    border-radius: 5%;
-    color: white;
 }
 
 .booking_counter {

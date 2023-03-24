@@ -5,12 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/CSS/style.css">  
+    <style> <?php include '/laragon/www/Charly/Hotel/CSS/style.css'; ?> </style>
 </head>
-<style>
-    * {
-        font-family: arial;
-    }
-</style>
 <body>
 
     <?php
@@ -19,11 +17,11 @@
             include $class_name . ".php";
         });
 
-        // INSTANCIATIONS ****************************************************************
+        // INSTANCIATIONS *************************************************************************************************
 
         // HÔTELS ********************************
-        $hilton = new Hotel("Hilton ****", "10 route de la gare", "67000 STRASBOURG");
-        $regent = new Hotel("Regent ****", "61 rue Dauphine", "75006 PARIS");
+        $hilton = new Hotel("Hilton ****", "10 route de la gare", "Strasbourg", "67000");
+        $regent = new Hotel("Regent ****", "61 rue Dauphine", "Paris", "75006");
 
         // CLIENTS ********************************
         $mickaMurmann = new Client("Micka", "Murmann", "Male", "1989/04/19");
@@ -66,14 +64,14 @@
         $booking2 = new Booking($mickaMurmann, $hilton, $chambre3, "2021/03/11", "2021/03/15");
         $booking3 = new Booking($mickaMurmann, $hilton, $chambre4, "2021/04/01", "2021/04/17");
 
-        // TESTS *************************************************************************
-        
+        // ****************************************************************************************************************
+        // AFFICHAGE *************************************************************************
         echo $hilton->getInfos() . "<br><br>";
-        echo $regent->getInfos() . "<br><br>";
-        echo $regent->getBookings() . "<br><br>";
-        echo $mickaMurmann->getInfos() . "<br><br>";
-        echo $chambre1->getInfos() . "<br><br>";
-        echo $booking3->getInfos() . "<br><br>";
+        echo $hilton->getBookings() . "<br>";
+        echo $regent->getBookings() . "<br>";
+        echo $mickaMurmann->getBookings() . "<br><br>";
+        echo $hilton->getRooms();
+        echo $virgileGibello->getBookings();
 
     ?>
 

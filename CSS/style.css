@@ -27,11 +27,9 @@ p {
     opacity:40%;
     padding:1.25rem;
     font-weight: 200;
-    width:15%;
 }
 
-#rooms_list th, #rooms-list td {
-    
+#rooms_list th, #rooms-list td {    
     text-align: start;
 }
 

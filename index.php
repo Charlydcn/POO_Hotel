@@ -71,7 +71,6 @@
         echo $regent->getBookings() . "<br>";
         echo $mickaMurmann->getBookings() . "<br><br>";
         echo $hilton->getRooms();
-        echo $virgileGibello->getBookings();
 
     ?>
 

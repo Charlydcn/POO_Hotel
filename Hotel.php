@@ -22,22 +22,22 @@ class Hotel
     //***************************************************** MÉTHODES *****************************************************
     //******************************************* ACCESSEURS (getters) *******************************************
 
-    public function getName() // A TESTER
+    public function getName() // CHECK
     {
         return $this->_name;
     }
 
-    public function getAddressName() // A TESTER
+    public function getAddressName() // CHECK
     {
         return $this->_addressName;
     }
 
     public function getCity()
     {
-        $result = $this->_city;
+        return $this->_city;
     }
 
-    public function getZipCode() // A TESTER
+    public function getZipCode() // CHECK
     {
         return $this->_zipCode;
     }
@@ -47,7 +47,7 @@ class Hotel
         return $this->_addressName . " " . $this->_zipCode . " " . $this->_city;
     }
 
-    public function getRooms() // A TESTER
+    public function getRooms() // CHECK
     {
         $result = 
         "<table id='rooms_list'>
@@ -67,12 +67,12 @@ class Hotel
         return $result;
     }
 
-    public function getNbRooms() // A TESTER
+    public function getNbRooms() // CHECK
     {
         return count($this->_rooms);
     }
 
-    public function getBookings() // A TESTER
+    public function getBookings() // CHECK
     {
         if (count($this->_bookings) > 1)
         {
@@ -91,12 +91,12 @@ class Hotel
         }
     }
 
-    public function getNbBookings() // A TESTER
+    public function getNbBookings() // CHECK
     {
         return count($this->_bookings);
     }
 
-    public function getInfos()
+    public function getInfos() // CHECK
     {
         $nbAvailableRooms = $this->getNbRooms() - $this->getNbBookings();
         return "<h2>" . $this->_name . " " . $this->_city . "</h2>" 
@@ -109,32 +109,32 @@ class Hotel
     //************************************************************************************************************
     //******************************************* MUTATEURS (setters) *******************************************
 
-    public function setName(string $name) // A TESTER
+    public function setName(string $name) // CHECK
     {
         $this->_name = $name;
     }
 
-    public function setAddressName(string $addressName) // A TESTER
+    public function setAddressName(string $addressName) // CHECK
     {
         $this->_addressName = $addressName;
     }
 
-    public function setCity(string $city) // A TESTER
+    public function setCity(string $city) // CHECK
     {
         $this->_city = $city;
     }
 
-    public function setZipCode(int $zipCode) // A TESTER
+    public function setZipCode(int $zipCode) // CHECK
     {
         $this->_zipCode = $zipCode;
     }
 
-    public function setRooms(Room $room) // A TESTER
+    public function setRooms(Room $room) // CHECK
     {
         $this->_rooms[] = $room;
     }
 
-    public function setBookings(Booking $booking) // A TESTER
+    public function setBookings(Booking $booking) // CHECK
     {
         $this->_bookings[] = $booking;
     }
@@ -151,7 +151,7 @@ class Hotel
             $this->_bookings[] = $booking;
         }
 
-    public function __toString()
+    public function __toString() // CHECK
     {
         return $this->_name . " " . $this->_city;
     }

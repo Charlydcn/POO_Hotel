@@ -60,7 +60,7 @@
             {
                 return "<i class='fa-solid fa-wifi'></i>";
             } else {
-                return "";
+                return "<i class='fa-solid fa-xmark'></i>";
             }
         }
 
@@ -68,9 +68,9 @@
         {
             if ($this->_state === true)
             {
-                return "<span id='room_available'>Disponible</span>";
+                return "<span class='room_available'>Disponible</span>";
             } else {
-                return "<span id='room_booked'>Réservée</span>";
+                return "<span class='room_booked'>Réservée</span>";
             }
         }
 

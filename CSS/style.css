@@ -1,0 +1,69 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-weight: 300;
+    line-height: 0;
+}
+
+p {
+    opacity: 60%;
+    line-height:1.5rem;
+}
+
+#rooms_list {
+    border-collapse:collapse;
+    padding:5px;
+    width:60%;
+}
+
+#rooms_list tbody>tr:nth-child(odd) {
+    background-color: #f8f8f8;
+}
+
+#rooms_list th {
+    font-size: 0.85rem;
+    opacity:40%;
+    padding:1.25rem;
+    font-weight: 200;
+}
+
+#rooms_list td {
+    text-align:center;
+    padding:1.25rem;
+    border-top: 1px rgb(202, 202, 202) solid;
+}
+
+#rooms_list td:nth-child(2), #rooms_list td:first-of-type, #rooms_list i {
+    opacity:60%;
+}
+
+td:nth-last-child(4) {
+    opacity:100%;
+}
+
+.ROOM_AVAILABLE {
+    font-size: 0.85rem;
+    background-color: #32d296;
+    padding: 4px 10px;
+    border-radius: 5%;
+    color: white;
+}
+
+.ROOM_BOOKED {
+    font-size: 0.85rem;
+    background-color: #f04f6e;
+    padding: 4px 10px;
+    border-radius: 5%;
+    color: white;
+}
+
+.booking_counter {
+    width:fit-content;
+    font-size: 1rem;
+    background-color: #32d296;
+    padding: 6px;
+    border-radius: 5%;
+    color: white;
+}

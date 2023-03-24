@@ -23,27 +23,27 @@
         // ************************************************ MÉTHODES ************************************************ 
         // ************************************** ACCESSEURS (getters) **************************************
 
-        public function getId() // A TESTER
+        public function getId() // CHECK
         {
             return $this->_id;
         }
 
-        public function getHotel() // A TESTER
+        public function getHotel() // CHECK
         {
             return $this->_hotel;
         }
 
-        public function getNbBeds() // A TESTER
+        public function getNbBeds() // CHECK
         {
             return $this->_nbBeds;
         }
 
-        public function getPrice() // A TESTER
+        public function getPrice() // CHECK
         {
             return $this->_price;
         }
 
-        public function getWifi() // A TESTER
+        public function getWifi() // CHECK
         {
             if ($this->_wifi === true)
             {
@@ -53,9 +53,8 @@
             }
         }
 
-        public function getWifiLogo()
+        public function getWifiLogo() // CHECK
         {
-            // <i class="fa-solid fa-wifi"></i>
             if ($this->_wifi === true)
             {
                 return "<i class='fa-solid fa-wifi'></i>";
@@ -64,7 +63,7 @@
             }
         }
 
-        public function getState() // A TESTER
+        public function getState() // CHECK
         {
             if ($this->_state === true)
             {
@@ -74,7 +73,7 @@
             }
         }
 
-        public function getInfos() // A TESTER
+        public function getInfos() // CHECK
         {
             return "Chambre " . $this->_id . "<br>"
             . "Hôtel : " . $this->_hotel . "<br>"
@@ -87,39 +86,40 @@
         // ************************************************************************************************** 
         // ************************************** MUTATEURS (setters) ***************************************
 
-        public function setId(int $id)
+        public function setId(int $id) // CHECK
         {
             $this->_id = $id;
         }
 
-        public function setHotel(Hotel $hotel) // A TESTER
+        public function setHotel(Hotel $hotel) // CHECK
         {
             $this->_hotel = $hotel;
         }
 
-        public function setNbBeds(int $nbBeds) // A TESTER
+        public function setNbBeds(int $nbBeds) // CHECK
         {
             $this->_nbBeds = $nbBeds;
         }
 
-        public function setPrice(float $price) // A TESTER
+        public function setPrice(float $price) // CHECK
         {
             $this->_price = $price;
         }
 
-        public function setWifi(bool $wifi) // A TESTER
+        public function setWifi(bool $wifi) // CHECK
         {
             $this->_wifi = $wifi;
         }
+
         
-        public function setState(bool $state) // A TESTER
+        public function setState(bool $state) // CHECK
         {
             $this->_state = $state;
         }
 
         // **************************************************************************************************
 
-        public function __toString() // A TESTER
+        public function __toString() // CHECK
         {
             return " (" . $this->_nbBeds . " lits - " . $this->getPrice() . " € - " . $this->getWifi() . ")";
         }

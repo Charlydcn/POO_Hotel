@@ -15,8 +15,8 @@
 
         public function getBookings() // A TESTER
         {
-            $result = "<h2>Réservations de " . $this . "</h2><br>";
-            $result .= "<div class='booking_counter'>" . $this->getNbBookings() . " RÉSERVATIONS</div>";
+            $result = "<h2>Réservation(s) de " . $this . "</h2>";
+            $result .= "<div class='booking_counter'>" . $this->getNbBookings() . " RÉSERVATION(S)</div>";
             $total = 0;
             foreach ($this->_bookings as $booking) {
                 $result .= "<p><strong>Hôtel : " . $booking->getHotel() . "</strong>";

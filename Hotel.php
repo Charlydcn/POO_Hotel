@@ -32,7 +32,7 @@ class Hotel
         return $this->_addressName;
     }
 
-    public function getCity()
+    public function getCity() // CHECK
     {
         return $this->_city;
     }
@@ -42,7 +42,7 @@ class Hotel
         return $this->_zipCode;
     }
     
-    public function getFullAddress()
+    public function getFullAddress() // CHECK
     {
         return $this->_addressName . " " . $this->_zipCode . " " . $this->_city;
     }

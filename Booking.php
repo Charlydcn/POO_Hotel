@@ -67,8 +67,8 @@
             . "Chambre : " . $this->_room->getId() . "<br>"
             . "Date de début : " . $this->getDateStart() . "<br>"
             . "Date de fin : " . $this->getDateEnd() . "<br>"
-            . "(Durée : " . $this->getBookingDuration() . ") <br>"
-            . "Prix : " . $this->getBookingPrice();
+            . "(Durée : " . $this->getDuration() . ") <br>"
+            . "Prix : " . $this->getPrice();
         }
 
         public function getInfosShort()

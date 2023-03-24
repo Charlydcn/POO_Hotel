@@ -13,7 +13,7 @@
         // ************************************************ MÉTHODES ************************************************ 
         // ************************************** ACCESSEURS (getters) **************************************
 
-        public function getBookings() // A TESTER
+        public function getBookings() // CHECK
         {
             $result = "<h2>Réservation(s) de " . $this . "</h2>";
             $result .= "<div class='booking_counter'>" . $this->getNbBookings() . " RÉSERVATION(S)</div>";
@@ -26,12 +26,12 @@
             return $result;
         }
 
-        public function getNbBookings() // A TESTER
+        public function getNbBookings() // CHECK
         {
             return count($this->_bookings);
         }
 
-        public function getInfos()
+        public function getInfos() // CHECK
         {
             return "Nom : " . strtoupper($this->getLastName()) . "<br>"
             . "Prénom : " . $this->getFirstName() . "<br>"
@@ -42,7 +42,7 @@
         // **************************************************************************************************
         // ************************************** MUTATEURS (setters) ***************************************
 
-        public function setBookings(Booking $booking) // A TESTER
+        public function setBookings(Booking $booking) // CHECK
         {
             $this->_bookings[] = $booking;
         }
@@ -54,7 +54,7 @@
             $this->_bookings[] = $booking;
         }
 
-        public function __toString() // A TESTER
+        public function __toString() // CHECK
         {
             return $this->getFirstName() . " " . strtoupper($this->getLastName());
         }
